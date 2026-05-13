@@ -1,24 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import './css/variables.css';
+import './css/base.css';
+import './css/nav.css';
+import './css/hero.css';
+import './css/sections.css';
+import './css/animations.css';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import useScrollReveal from './hooks/useScrollReveal';
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
+import References from './pages/References';
+import Contact from './pages/Contact';
+
+function AppContent() {
+  useScrollReveal();
+
+  return (
+    <>
+      <NavBar />
+      <ScrollToTop />
+
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/references" element={<References />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </main>
+
+      <Footer />
+    </>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HashRouter>
+      <AppContent />
+    </HashRouter>
   );
 }
 

@@ -1,0 +1,84 @@
+/*
+  animations.css — Keyframes & Scroll-Reveal Transitions
+  ────────────────────────────────────────────────────────
+  Kept separate so all motion lives in one place.
+  To reduce or remove animations (e.g. for accessibility),
+  you only need to edit this one file.
+*/
+
+
+/* ── @keyframes ──────────────────────────────────────────────────
+  @keyframes defines a named animation sequence.
+  You describe what should happen at each stage (from → to, or 0% → 100%).
+  Then you apply it with: animation: name duration delay fill-mode;
+─────────────────────────────────────────────────────────────────── */
+
+/* fadeUp: element starts invisible and slightly below its final position,
+   then rises into place and becomes fully visible. */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+        /* 24px below final position */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* slowSpin: a continuous full rotation, used on the hero decorative ring.
+   animation-timing-function: linear keeps the speed constant. */
+@keyframes slowSpin {
+    to {
+        transform: translateY(-50%) rotate(360deg);
+        /* Note: the translateY(-50%) is preserved so the ring stays centred
+       while also rotating */
+    }
+}
+
+
+/* ── Scroll-Reveal ───────────────────────────────────────────────
+  Elements with class .reveal start hidden and off-position.
+  scroll.js adds .visible when they enter the viewport.
+  The transition property smoothly animates the change.
+─────────────────────────────────────────────────────────────────── */
+
+/* Initial (hidden) state */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+
+    /* transition: what to animate, duration, easing function
+     "ease" starts fast and slows to a stop — feels natural */
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+/* Visible state — JS adds this class via IntersectionObserver */
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ── Reduced-Motion Accessibility ────────────────────────────────
+  Some users have a system preference to reduce motion (e.g. due to
+  vestibular disorders). This media query respects that preference
+  by disabling all animations and transitions for those users.
+─────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    /* Make scroll-reveal elements instantly visible instead of fading in */
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
