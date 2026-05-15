@@ -2,7 +2,6 @@ export default function References() {
     return (
         <section id="references">
             <div className="reveal">
-                <p className="section-label">References</p>
                 <h2>Kind words from people I've worked with</h2>
             </div>
             <div className="refs-grid">

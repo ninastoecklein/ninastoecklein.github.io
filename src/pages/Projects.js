@@ -2,7 +2,6 @@ export default function Projects() {
     return (
         <section id="projects">
             <div className="reveal">
-                <p className="section-label">Projects</p>
                 <h2>Things I've built</h2>
             </div>
             <div className="projects-grid">

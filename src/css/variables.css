@@ -16,44 +16,44 @@
 
 :root {
 
-    /* ── Colour Palette ──────────────────────────────────────────────
+  /* ── Colour Palette ──────────────────────────────────────────────
      These go from light (cream) → dark (ink), like a paint swatch.
      Using a warm, earthy palette to give the portfolio a personal feel.
   ────────────────────────────────────────────────────────────────── */
-    --cream: #faf7f2;
-    /* page background — the lightest tone   */
-    --parchment: #f0ead8;
-    /* slightly warmer; used for card backgrounds */
-    --sand: #e8dfc8;
-    /* borders and subtle dividers           */
-    --terracotta: #c1694f;
-    /* primary accent — buttons, labels, dots */
-    --rust: #a0522d;
-    /* darker accent — hover states          */
-    --bark: #5c3d2e;
-    /* medium text and secondary elements    */
-    --ink: #2c1f14;
-    /* headings and body text — near-black   */
-    --muted: #8a7060;
-    /* secondary / supporting text           */
-    --white: #ffffff;
+  --cream: #faf7f2;
+  /* page background — the lightest tone   */
+  --parchment: #f0ead8;
+  /* slightly warmer; used for card backgrounds */
+  --sand: #e8dfc8;
+  /* borders and subtle dividers           */
+  --terracotta: #c1694f;
+  /* primary accent — buttons, labels, dots */
+  --rust: #a0522d;
+  /* darker accent — hover states          */
+  --bark: #5c3d2e;
+  /* medium text and secondary elements    */
+  --ink: #2c1f14;
+  /* headings and body text — near-black   */
+  --muted: #8a7060;
+  /* secondary / supporting text           */
+  --white: #ffffff;
 
-    /* ── Typography ─────────────────────────────────────────────────
+  /* ── Typography ─────────────────────────────────────────────────
      Using TWO fonts creates visual hierarchy:
        Serif  → headings (feel warm, editorial, trustworthy)
        Sans   → body text (clean and easy to read at small sizes)
   ────────────────────────────────────────────────────────────────── */
-    --font-serif: 'Lora', Georgia, serif;
-    --font-sans: 'DM Sans', sans-serif;
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: 'DM Sans', sans-serif;
 
-    /* ── Layout ──────────────────────────────────────────────────────
+  /* ── Layout ──────────────────────────────────────────────────────
      --max-w limits how wide content grows on large screens.
      Without it, long lines of text become hard to read.
 
      --section-gap is the vertical padding inside each section.
      Defining it once means all sections stay consistently spaced.
   ────────────────────────────────────────────────────────────────── */
-    --max-w: 860px;
-    --section-gap: 6rem;
-    /* 1rem = 16px by default, so 6rem = 96px */
+  --max-w: 860px;
+  --section-gap: 6rem;
+  /* 1rem = 16px by default, so 6rem = 96px */
 }

@@ -6,7 +6,6 @@ import './css/hero.css';
 import './css/sections.css';
 import './css/animations.css';
 import NavBar from './components/NavBar';
-import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import useScrollReveal from './hooks/useScrollReveal';
 import Home from './pages/Home';
@@ -36,7 +35,6 @@ function AppContent() {
         </Routes>
       </main>
 
-      <Footer />
     </>
   );
 }

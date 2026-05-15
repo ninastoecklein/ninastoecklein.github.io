@@ -2,7 +2,6 @@ export default function Skills() {
     return (
         <section id="skills">
             <div className="reveal">
-                <p className="section-label">Skills</p>
                 <h2>My toolkit</h2>
             </div>
             <div className="skills-grid reveal">

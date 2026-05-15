@@ -4,7 +4,6 @@ export default function About() {
     return (
         <section id="about">
             <div className="reveal">
-                <p className="section-label">About Me</p>
                 <h2>A developer who cares<br />about craft & people</h2>
             </div>
             <div className="about-grid reveal">
